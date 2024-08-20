@@ -13,8 +13,11 @@ with open('prompt.json', 'r') as jsonfile:
   prompts = json.load(jsonfile)
 
 def query(payload):
-	response = requests.post(API_URL, headers=headers, json=payload)
-	return response.content
+  try:
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.content
+  except Exception as e:
+    print(f"Error: {e}")
 
 def generate():
   try:
@@ -26,7 +29,8 @@ def generate():
       "parameters": {
         "width": 1920,
         "height": 1080,
-        # "randomize_seed": True
+        "seed": 0,
+        "randomize_seed": True
       }
     })
     image = Image.open(io.BytesIO(image_bytes))
@@ -34,7 +38,19 @@ def generate():
   except Exception as e:
     print(f"Error: {e}")
 
-generate()
+def generate_2():
+  image_bytes = query({
+    "inputs": "Cinematic photograph of a house in the light of day in front of a nature background --ar 16:9 --v 6.0 --style raw",
+    "parameters": {
+      "width": 1024,
+      "height": 1024
+    }
+  })
+  print(image_bytes)
+  image = Image.open(io.BytesIO(image_bytes))
+  image.show()
+
+generate_2()
 """ schedule.every(5).minutes.do(generate)
 while True:
     schedule.run_pending()
