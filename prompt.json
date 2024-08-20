@@ -1,0 +1,34 @@
+[
+    {
+        "prompt": "A photograph of a cat playing with a ball in the patio. Nikon 500, realistic photography. --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "Silhouette of Hamburger standing in front of a, dark blue sky, a little saturated orange in the background sunset, night time, dark background, dark black hair, cinematic photography, cinematic lighting, dark theme, shattered camera lens, digital photography, 70mm, f2.8, lens aberration, grain, boke, double exposure, shaterred, color negative --ar 16:9",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "A studio photography of dinner dishes shot in front of a coffee house background --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "Office environment, closeup portrait photography, light gray background, high detail, high resolution, shot in the style of Sony A7R V, cinematic, high contrast, sharp focus, natural features --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "A can of soda,on a rustic wooden table with a red checkered cloth underneath it, with some broken oaky pieces scattered next to it, food photography in the style of dark grey background, side view, centered composition, professional photo --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "Portrait photography of a lion, with a dark blue background, in a minimalistic style. --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "Cinematic photograph of a house in the light of day in front of a nature background --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "A photo of coffe , on a rustic wooden table with a red checkered cloth and broken chunks of cookies nearby. Studio lighting against a dark grey background, a low angle view, centered composition. High resolution, very realistic, high quality photography with high detail --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    }
+]
