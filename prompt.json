@@ -12,10 +12,6 @@
         "neg_prompt": ""
     },
     {
-        "prompt": "Office environment, closeup portrait photography, light gray background, high detail, high resolution, shot in the style of Sony A7R V, cinematic, high contrast, sharp focus, natural features --ar 16:9 --v 6.0 --style raw",
-        "neg_prompt": ""
-    },
-    {
         "prompt": "A can of soda,on a rustic wooden table with a red checkered cloth underneath it, with some broken oaky pieces scattered next to it, food photography in the style of dark grey background, side view, centered composition, professional photo --ar 16:9 --v 6.0 --style raw",
         "neg_prompt": ""
     },
