@@ -20,10 +20,6 @@
         "neg_prompt": ""
     },
     {
-        "prompt": "Portrait photography of a lion, with a dark blue background, in a minimalistic style. --ar 16:9 --v 6.0 --style raw",
-        "neg_prompt": ""
-    },
-    {
         "prompt": "Cinematic photograph of a house in the light of day in front of a nature background --ar 16:9 --v 6.0 --style raw",
         "neg_prompt": ""
     },

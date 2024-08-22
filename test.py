@@ -1,3 +1,4 @@
+import base64
 import requests
 import io
 from PIL import Image
@@ -27,14 +28,19 @@ def generate():
     image_bytes = query({
       "inputs": prompt,
       "parameters": {
-        "width": 1920,
-        "height": 1080,
-        "seed": 0,
-        "randomize_seed": True
+        "width": 64,
+        "height": 64,
+        "seed": 0
       }
     })
+    print(image_bytes[:100])
+    text_data = base64.b64encode(image_bytes).decode('utf-8')
+    print(type(text_data))
+    print(text_data)
+    if "error" in text_data: print(text_data)
     image = Image.open(io.BytesIO(image_bytes))
     image.save(f"wallpaper/flux_{random.random()}.png", format="PNG")
+    print("Image saved")
   except Exception as e:
     print(f"Error: {e}")
 
@@ -50,7 +56,7 @@ def generate_2():
   image = Image.open(io.BytesIO(image_bytes))
   image.show()
 
-generate_2()
+generate()
 """ schedule.every(5).minutes.do(generate)
 while True:
     schedule.run_pending()
