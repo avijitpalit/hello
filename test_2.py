@@ -1,11 +1,9 @@
-import time
 from huggingface_hub import InferenceClient
-import random
-import json
-import schedule
+import random, time, json, schedule, wallpaper, os
 
-client = InferenceClient(model="black-forest-labs/FLUX.1-dev", token="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")
-with open('prompt.json', 'r') as jsonfile:
+# client = InferenceClient(model="black-forest-labs/FLUX.1-dev", token="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")
+client = InferenceClient(model="SG161222/RealVisXL_V4.0", token="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")
+with open('prompts.json', 'r') as jsonfile:
     prompts = json.load(jsonfile)
 
 def generate():
@@ -20,13 +18,16 @@ def generate():
                 height=1072
             )
         print(image)
-        image.save(f"wallpaper/flux_{random.random()}.png", format="PNG")
+        wallpaper_path = f"wallpaper/flux_{random.random()}.png"
+        image.save(wallpaper_path, format="PNG")
         print("Image saved")
+        wallpaper.set(os.path.abspath(wallpaper_path))
+        print("Wallpaper changed")
     except Exception as e:
         print(f"ERROR: {e}")
 
 generate()
-schedule.every(10).minutes.do(generate)
+schedule.every(5).minutes.do(generate)
 while True:
     schedule.run_pending()
     time.sleep(1)

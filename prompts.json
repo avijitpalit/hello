@@ -16,11 +16,19 @@
         "neg_prompt": ""
     },
     {
-        "prompt": "Cinematic photograph of a house in the light of day in front of a nature background --ar 16:9 --v 6.0 --style raw",
+        "prompt": "Food photography, shakshuka, top view, in a luxurious Michelin kitchen style, studio lighting, depth of field, ultra detailed, --no 2 heads, 2 faces, heterochromia, cropped image, ((hat)), ((belt)), out of frame, necklace, draft, deformed hands, twisted fingers, double image, malformed hands, multiple heads, extra limb, ugly, poorly drawn hands, missing limb, disfigured, cut-off, ugly, grainy, low-res, Deformed, blurry, bad anatomy, poorly drawn face, mutation, mutated, floating limbs, disconnected limbs, disgusting, mutilated, mangled, extra fingers, duplicate artifacts, morbid, gross proportions, missing arms, mutated hands, mutilated hands, cloned face, malformed, blur, haze, out of focus, low resolution, low quality, watermark, out of frame, uneven exposure, tattoos, bad composition, jpeg artifacts, text, WOMAN, female --ar 16:9",
         "neg_prompt": ""
     },
     {
         "prompt": "A photo of coffe , on a rustic wooden table with a red checkered cloth and broken chunks of cookies nearby. Studio lighting against a dark grey background, a low angle view, centered composition. High resolution, very realistic, high quality photography with high detail --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "A tequila with lemons and salt, on wooden table, in the style of product photography. --ar 16:9 --v 6.0 --style raw",
+        "neg_prompt": ""
+    },
+    {
+        "prompt": "Close up of tree bark, realistic and hyper detailed with a cinematic look and feel. Volumetric light and soft shadows with no contrast and a bokeh effect. High resolution photography in the style of octane render, appearing photorealistic with super fine details and sharp focus with no blur. --ar 85:128 --v 6.0 --style raw",
         "neg_prompt": ""
     }
 ]
