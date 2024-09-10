@@ -7,10 +7,10 @@ import schedule
 import time
 import json
 
-API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-dev"
+API_URL = "https://api-inference.huggingface.co/models/John6666/epicrealism-xl-v8kiss-sdxl"
 headers = {"Authorization": "Bearer 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"}
 
-with open('prompt.json', 'r') as jsonfile:
+with open('prompts.json', 'r') as jsonfile:
   prompts = json.load(jsonfile)
 
 def query(payload):
@@ -28,16 +28,15 @@ def generate():
     image_bytes = query({
       "inputs": prompt,
       "parameters": {
-        "width": 64,
-        "height": 64,
-        "seed": 0
+        "width": 1024,
+        "height": 1024
       }
     })
-    print(image_bytes[:100])
-    text_data = base64.b64encode(image_bytes).decode('utf-8')
-    print(type(text_data))
-    print(text_data)
-    if "error" in text_data: print(text_data)
+    print(image_bytes[:200])
+    # text_data = base64.b64encode(image_bytes).decode('utf-8')
+    # print(type(text_data))
+    # print(text_data)
+    # if "error" in text_data: print(text_data)
     image = Image.open(io.BytesIO(image_bytes))
     image.save(f"wallpaper/flux_{random.random()}.png", format="PNG")
     print("Image saved")

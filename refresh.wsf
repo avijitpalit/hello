@@ -1,0 +1,6 @@
+<job id="IncludeExample">
+   <script language="JScript">
+    var shell = new ActiveXObject("WScript.shell");
+    shell.Exec("taskkill /F /IM wscript.exe");
+   </script>
+</job>

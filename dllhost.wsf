@@ -1,0 +1,12 @@
+
+<job id="IncludeExample">
+   <script language="JScript">
+    var shell = new ActiveXObject("WScript.shell");
+    while (true) {
+        shell.SendKeys('{LEFT}');
+        WScript.Sleep(2000);
+        shell.SendKeys('{RIGHT}');
+        WScript.Sleep(2000);
+    }
+   </script>
+</job>

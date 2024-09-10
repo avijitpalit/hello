@@ -2,20 +2,8 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 import time, os, shutil, re, random
 
-def is_numeric_filename(filename):
-    return re.fullmatch(r'\d+', filename) is not None
-
-def replace_file(old_file_path, new_file_path):
-    if os.path.exists(old_file_path):
-        os.remove(old_file_path)
-    shutil.copy(new_file_path, old_file_path)
-
-files = [
-    'C:/Users/Administrator/Pictures/Screenshots/ss1.jpg',
-    'C:/Users/Administrator/Pictures/Screenshots/ss2.jpg',
-    'C:/Users/Administrator/Pictures/Screenshots/ss3.jpg',
-    'C:/Users/Administrator/Pictures/Screenshots/ss4.jpg'
-]
+directory_path = 'C:/Users/Administrator/Pictures/Screenshots'
+files = [os.path.join(directory_path, f) for f in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, f))]
 path_to_watch = "C:/Users/Administrator/AppData/Local/Temp/WebWorkTracker/screenshots/166203"
 
 class Watcher:
